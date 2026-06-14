@@ -6,6 +6,27 @@ The system treats your career history as structured data, your writing preferenc
 
 ---
 
+## Understanding Agentic Coding Environments (For Beginners)
+
+If you are new to using AI agents in your development environment (such as **Antigravity**, **Cursor**, or **Windsurf**), here is a quick guide on how this system operates:
+
+### What is an "Agentic" Environment?
+In a standard LLM chat (like ChatGPT or Claude.ai), you have to manually copy-paste code and files back and forth. In contrast, an **agentic coding environment** allows the AI agent to interact directly with your workspace. The agent can:
+- **Read files:** Access your master CV files, rules, and active applications.
+- **Write and edit files:** Generate tailored resumes, cover letters, and reports directly in their target folders.
+- **Execute commands:** Fetch URLs, scrape job descriptions, run search scripts, and compile assets.
+
+In this workspace, the agent functions as an autonomous, context-aware co-developer.
+
+### How to Collaborate with the Agent
+To get the best results from this template:
+1. **Reference Files, Don't Copy-Paste:** Tell the agent to read your files directly. For example, say: *"Look at my work history in `masterCV/master_work_experience.md` and check if I fit this job description."* In environments like Cursor or Windsurf, you can type `@` to reference files directly.
+2. **Trigger Workflows by Name:** The workflows in `.agent/workflows/` are step-by-step scripts. You can ask the agent: *"Execute `/application-1` for this job description: [URL]"* or *"Follow the steps in `.agent/workflows/application-1.md`."*
+3. **Acknowledge Permissions:** As the agent reads files, scrapes job postings, or creates folders, the environment may prompt you to authorize these operations. Granting permissions allows the agent to run the pipelines autonomously.
+4. **Leverage Git and Reviews:** The agent will make file edits directly in your workspace. Use your editor's source control tab to review the diffs, refine any phrasing, and control exactly what gets committed.
+
+---
+
 ## 1. Directory Structure
 
 Duplicate this template folder to create your job-searching repository. The directory is structured as follows:
