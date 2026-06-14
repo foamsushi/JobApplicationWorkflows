@@ -25,6 +25,15 @@ To get the best results from this template:
 3. **Acknowledge Permissions:** As the agent reads files, scrapes job postings, or creates folders, the environment may prompt you to authorize these operations. Granting permissions allows the agent to run the pipelines autonomously.
 4. **Leverage Git and Reviews:** The agent will make file edits directly in your workspace. Use your editor's source control tab to review the diffs, refine any phrasing, and control exactly what gets committed.
 
+### IDE Compatibility & Customization (Cursor, Windsurf, Antigravity)
+By default, this template is structured with a `.agent/` folder to store instructions, rules, and workflows. Depending on the agentic coding IDE you use, this configuration is consumed as follows:
+*   **Antigravity:** Native compatibility. It reads the instructions from `.agent/rules/` and exposes workflows from `.agent/workflows/` as direct slash commands (e.g., `/application-1`).
+*   **Cursor:** Supported via the `.cursorrules` file at the root. This tells the Cursor agent to read and respect the rules in the `.agent/rules/` directory and use the step-by-step templates in `.agent/workflows/` when you request assistance.
+*   **Windsurf:** Supported via the `.windsurfrules` file at the root. Similar to Cursor, Windsurf's agent automatically detects this file and applies the context and behavior constraints from `.agent/`.
+*   **Other Environments / Standard Web Chat:** If you are using a standard chat model (such as ChatGPT, Claude, or Gemini Advanced), you can customize these by copying/pasting the raw markdown content from the rules and workflows as part of your system prompts or custom instructions.
+
+To modify the system's behavior or add environment-specific settings (like VS Code workspace configs or auto-run formats), you can edit the `.cursorrules` or `.windsurfrules` files in the workspace.
+
 ---
 
 ## 1. Directory Structure
@@ -36,6 +45,8 @@ Duplicate this template folder to create your job-searching repository. The dire
 │
 ├── README.md                # System documentation
 ├── job_tracker.md           # The Dashboard (Table tracking all applications)
+├── .cursorrules             # Rules compatibility bridge for Cursor
+├── .windsurfrules           # Rules compatibility bridge for Windsurf
 │
 ├── /masterCV                # Your Source of Truth (NEVER edit these for specific jobs)
 │   ├── master_skills.md     # Specialized lists (technical skills, languages, tools)

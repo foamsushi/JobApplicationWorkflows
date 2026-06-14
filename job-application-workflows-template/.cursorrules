@@ -1,0 +1,9 @@
+# Cursor System Rules
+
+Always read, understand, and strictly adhere to the rules defined in the `.agent/rules/` directory:
+- rule1.md: Anti-hallucination constraints.
+- rule2.md: PII protection.
+- general-writing.md: Phrasing constraints and writing style engine rules.
+- Other rule files in `.agent/rules/`.
+
+When the user asks you to perform a task (e.g., classifying a job, tailoring a resume, drafting a cover letter, or mock interviewing), guide them through the step-by-step workflows defined in `.agent/workflows/`. You can find the specific prompts and instructions for each step there.
